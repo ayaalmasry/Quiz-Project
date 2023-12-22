@@ -1,0 +1,90 @@
+<!-- <button mat-stroked-button color="primary" (click)="showPopup()"  [ngClass]="showWarning ? 'hideBtn':''">Start Quiz</button>
+
+<div class="info-box" [ngClass]="showWarning ? 'activeInfo':''" >
+  <div class="title"><span>Some Rules of this Quiz</span></div>
+  <div class="list">
+    <ul>
+      <li class="info">1.You will have only <span>15 Seconds</span>per each question</li>
+      <li>2.Once you select your answer</li>
+      <li>3.You can't select any question once time goes off</li>
+      <li>4. you can't exit from the Quiz one started</li>
+    </ul>
+  </div>
+  <div class="button">
+    <button mat-stroked-button color="accent" (click)="showWarning = false">Exit Quiz</button>
+    <button mat-stroked-button color="warn">Start Quiz</button>
+   
+    </div>
+</div> -->
+
+
+<!-- <button mat-stroked-button class="startBtn" color="primary" (click)="showPopup()" [ngClass]="showWarning ? 'hideBtn':''">Start Quiz</button>
+<div class="info_box" [ngClass]="showWarning ?'activeInfo':''" >
+  <div class="info-title"><span>Some Rules of this Quiz</span></div>
+  <div class="info_list">
+    <div class="info">1.You will have only <span>15 Seconds</span>per each question</div>
+    <div class="info">2.Once you select your answer</div>
+    <div class="info">3.You can't select any question once time goes off</div>
+    <div class="info">4.you can't exit from the Quiz one started</div>
+
+
+  </div>
+  <div class="button">
+    <button mat-stroked-button color="accent" (click)="showWarning = false">Exit Quiz</button>
+    <button mat-stroked-button color="warn">Start Quiz</button>
+
+  </div>
+</div> -->
+
+
+<div class="start_btn"><button [ngClass]="showWarning ? 'hideBtn':''" (click)="showPopup()">Start Quiz</button></div>
+
+
+<div class="info_box" [ngClass]="showWarning ?'activeInfo':''" *ngIf="!nextStepQuiz">
+  <div class="info-title"><span>Some Rules of this Quiz</span></div>
+  <div class="info-list">
+    <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+    <div class="info">2. Once you select your answer, it can't be undone.</div>
+    <div class="info">3. You can't select any option once time goes off.</div>
+    <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+    <div class="info">5. You'll get points on the basis of your correct answers.</div>
+  </div>
+  <div class="buttons">
+    <button class="quit" (click)="showWarning = false">Exit Quiz</button>
+    <button class="restart" (click)="nextStepQuizI()">Continue</button>
+  </div>
+</div>
+
+<div class="quiz_box" [ngClass]="nextStepQuiz ? 'activeInfoquiz' :''">
+  <header>
+    <div class="title">Awesome Quiz Application</div>
+    <div class="timer">
+      <div class="time_left_txt">Time off</div>
+      <div class="timer_sec">{{remainingTimer}}</div>
+    </div>
+    <div class="time_line"></div>
+  </header>
+  <section *ngIf="questionList && questionList.length > qurentQuestionNo">
+    <div class="que_text">
+      <span>{{qurentQuestionNo+1}}.{{questionList[qurentQuestionNo].question}}</span>
+    </div>
+    <!-- [ngClass]="option.isSelected? 'selected':''" -->
+    <div class="option_list" (click)="selectOption(option)"
+      [ngClass]="{'disabled':isOptionSelected(questionList[qurentQuestionNo].options),'correct':option.isSelected != undefined && option.isCorrect,
+      'incorrect':option.isSelected != undefined && !option.isCorrect}"
+      *ngFor="let option of questionList[qurentQuestionNo].options">
+      {{option.answer}}
+    </div>
+  </section>
+
+  <!-- footer of Quiz Box -->
+  <footer>
+    <div class="total_que">
+      <span>
+        <p>{{qurentQuestionNo+1}} </p>of<p>{{questionList.length}}Questions</p>
+      </span>
+    </div>
+    <button class="next_btn" class="btn btn-primary" (click)="nextQuetion()"
+      [disabled]="qurentQuestionNo+1 === questionList.length ">Next Que</button>
+  </footer>
+</div>

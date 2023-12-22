@@ -1,0 +1,118 @@
+
+[
+   {
+    "questionId":1,
+    "question":"What does HTML stand for?",
+    "options":[
+        {
+            "answer":"Hyper Text Preprocessor",
+            "isCorrect":false
+        },
+        {
+            "answer":"Hyper Text Markup Language",
+            "isCorrect":true
+        },
+        {
+            "answer":"Hyper Text Multiple Language",
+            "isCorrect":false
+        },
+        {
+            "answer":"Hyper Tool Multi Language",
+            "isCorrect":false
+        }
+
+    ]
+   },
+   {
+    "questionId":2,
+    "question":"What does CSS stand for?",
+    "options":[
+        {
+            "answer":"Cascading Style Sheet",
+            "isCorrect":true
+        },
+        {
+            "answer":"Colorful Style Sheet",
+            "isCorrect":false
+        },
+        {
+            "answer":"Computer Style Sheet",
+            "isCorrect":false
+        },
+        {
+            "answer":"Hyper Tool Multi Language",
+            "isCorrect":false
+        }
+
+    ]
+   },
+   {
+    "questionId":3,
+    "question":"What does PHP stand for?",
+    "options":[
+        {
+            "answer":"Hypertext Programming",
+            "isCorrect":true
+        },
+        {
+            "answer":"Colorful Style Sheet",
+            "isCorrect":false
+        },
+        {
+            "answer":"Hypertext Preprocessor",
+            "isCorrect":true
+        },
+        {
+            "answer":"Hometext Preprocessor",
+            "isCorrect":false
+        }
+
+    ]
+   },
+   {
+    "questionId":4,
+    "question":"What does SQL stand for?",
+    "options":[
+        {
+            "answer":"Structured Query Language",
+            "isCorrect":true
+        },
+        {
+            "answer":"Colorful Style Sheet",
+            "isCorrect":false
+        },
+        {
+            "answer":"Hypertext Preprocessor",
+            "isCorrect":true
+        },
+        {
+            "answer":"Hometext Preprocessor",
+            "isCorrect":false
+        }
+
+    ]
+   },
+   {
+    "questionId":5,
+    "question":"What does XML stand for?",
+    "options":[
+        {
+            "answer":"eXtensible Markup Language",
+            "isCorrect":true
+        },
+        {
+            "answer":"Colorful Style Sheet",
+            "isCorrect":false
+        },
+        {
+            "answer":"Hypertext Preprocessor",
+            "isCorrect":true
+        },
+        {
+            "answer":"Hometext Preprocessor",
+            "isCorrect":false
+        }
+
+    ]
+   }
+]
